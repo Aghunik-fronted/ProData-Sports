@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProData Sports</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="/" class="header__logo logo">
+                <span class="logo__accent">PRODATA</span>SPORTS
+            </a>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="/stats" class="nav__link nav__link--active">Статистика</a></li>
+                    <li class="nav__item"><a href="/subscriptions" class="nav__link">Подписки</a></li>
+                    <li class="nav__item"><a href="/promo" class="nav__link">Акции</a></li>
+                    <li class="nav__item"><a href="/faq" class="nav__link">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="header__user user-profile">
+                <div class="user-profile__info">
+                    <span class="user-profile__balance">1 450 ₽</span>
+                    <div class="user-profile__avatar">
+                        <img src="avatar-placeholder.jpg" alt="User">
+                    </div>
+                </div>
+                <ul class="user-profile__dropdown">
+                    <li><a href="/dashboard">Дашборд</a></li>
+                    <li><a href="/settings">Профиль</a></li>
+                    <li><a href="/logout">Выйти</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        Профессиональная аналитика <br> 
+                        <span>спортивных событий</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        Получайте доступ к точным прогнозам с проходимостью более 75%. Детальная статистика и прозрачные результаты в реальном времени.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="/subscriptions" class="btn btn--primary">Купить подписку</a>
+                        <a href="/stats" class="btn btn--outline">Смотреть статистику</a>
+                    </div>
+                </div>
+                <div class="hero__visual">
+                    <div class="hero__card">
+                        <div class="hero__card-badge">Live Analytics</div>
+                        <div class="hero__card-roi">+240% ROI</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="predicts">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Лента прогнозов</h2>
+                    <a href="/stats" class="link-more">Вся статистика</a>
+                </div>
+                <div class="predicts-grid">
+                    <article class="p-card">
+                        <div class="p-card__head">
+                            <span class="p-card__tag">Футбол</span>
+                            <span class="p-card__time">Сегодня, 21:00</span>
+                        </div>
+                        <div class="p-card__body">
+                            <p class="p-card__teams">Реал Мадрид — Барселона</p>
+                        </div>
+                        <div class="p-card__footer">
+                            <div class="p-card__odds">КФ 1.95</div>
+                            <button class="btn btn--primary btn--sm">Анализ</button>
+                        </div>
+                    </article>
+                    <article class="p-card p-card--locked">
+                        <div class="p-card__lock-content">
+                            <div class="p-card__icon">🔒</div>
+                            <p>Прогноз доступен <br> по подписке</p>
+                            <button class="btn btn--primary btn--sm">Открыть</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="tariffs">
+            <div class="container">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">Тарифные планы</h2>
+                <div class="tariffs-grid">
+                    <div class="tariff-item">
+                        <h3 class="tariff-item__name">Lite</h3>
+                        <div class="tariff-item__price">2 900 ₽ <span>/ мес</span></div>
+                        <ul class="tariff-item__features">
+                            <li>1-2 прогноза в день</li>
+                            <li>Коэффициенты до 1.8</li>
+                            <li>Поддержка в чате</li>
+                        </ul>
+                        <button class="btn btn--outline">Выбрать</button>
+                    </div>
+                    <div class="tariff-item tariff-item--popular">
+                        <div class="tariff-item__badge">Популярный</div>
+                        <h3 class="tariff-item__name">Pro</h3>
+                        <div class="tariff-item__price">5 900 ₽ <span>/ мес</span></div>
+                        <ul class="tariff-item__features">
+                            <li>3-5 прогнозов в день</li>
+                            <li>Коэффициенты 2.0+</li>
+                            <li>Закрытый канал в Telegram</li>
+                            <li>Приоритетная поддержка</li>
+                        </ul>
+                        <button class="btn btn--primary">Выбрать</button>
+                    </div>
+                    <div class="tariff-item">
+                        <h3 class="tariff-item__name">VIP</h3>
+                        <div class="tariff-item__price">12 900 ₽ <span>/ мес</span></div>
+                        <ul class="tariff-item__features">
+                            <li>Безлимит прогнозов</li>
+                            <li>Доступ ко всем стратегиям</li>
+                            <li>Личный консультант</li>
+                            <li>Гарантия дохода по ТЗ</li>
+                        </ul>
+                        <button class="btn btn--outline">Выбрать</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <a href="/" class="logo footer__logo"><span class="logo__accent">PRODATA</span>SPORTS</a>
+                <p class="footer__text">Профессиональный сервис спортивной аналитики. Мы помогаем принимать взвешенные решения.</p>
+            </div>
+            <div class="footer__nav">
+                <div class="footer__col">
+                    <h4>Сервис</h4>
+                    <a href="/stats">Статистика</a>
+                    <a href="/subscriptions">Подписки</a>
+                    <a href="/promo">Акции</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Поддержка</h4>
+                    <a href="/faq">FAQ</a>
+                    <a href="/contacts">Контакты</a>
+                    <a href="/rules">Правила</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; 2024 ProData Sports. Все права защищены. 18+</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
