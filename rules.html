@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Rules — ProData Sports</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="/" class="header__logo logo">
+                <span class="logo__accent">PRODATA</span>SPORTS
+            </a>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="stats.html" class="nav__link nav__link--active">Статистика</a></li>
+                    <li class="nav__item"><a href="prediction-detail.html" class="nav__link">Подписки</a></li>
+                    <li class="nav__item"><a href="promo.html" class="nav__link">Акции</a></li>
+                    <li class="nav__item"><a href="faq.html" class="nav__link">FAQ</a></li>
+                </ul>
+            </nav>
+            <button class="header__burger" aria-label="Открыть меню">
+                <span></span>
+            </button>
+            <div class="header__actions">
+                <a href="cart.html" class="cart-link" title="Корзина">
+                    <div class="cart-link__icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                        <span class="cart-link__badge">0</span>
+                    </div>
+                </a>
+                <div class="user-profile">
+                    <div class="user-profile__info">
+                        <span class="user-profile__balance">0 ₽</span>
+                        <div class="user-profile__avatar">
+                            <img src="https://placeholder.com" alt="User">
+                        </div>
+                    </div>
+                    <ul class="user-profile__dropdown">
+                        <li><a href="dashboard.html">Дашборд</a></li>
+                        <li><a href="settings.html">Настройки</a></li>
+                        <li class="divider"></li>
+                        <li><a href="index.html" class="logout">Выйти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="text-content">
+        <div class="container container--narrow">
+            <h1 class="page-title">Название страницы (напр. Правила сервиса)</h1>
+            
+            <div class="article">
+                <h2>1. Общие положения</h2>
+                <p>Текст вашего раздела. Здесь вы описываете основные правила работы сервиса. Все элементы стилизованы через SCSS.</p>
+
+                <h2>2. Интеллектуальная собственность</h2>
+                <p>Вся аналитическая информация, предоставляемая на сайте, является собственностью ProData Sports.</p>
+                
+                <ul>
+                    <li>Запрещено копирование материалов без ссылки;</li>
+                    <li>Запрещена перепродажа прогнозов;</li>
+                    <li>Доступ предоставляется только для личного использования.</li>
+                </ul>
+
+                <h2>3. Ответственность</h2>
+                <p>Мы напоминаем, что ставки на спорт несут финансовые риски. Сервис не гарантирует 100% результат.</p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <a href="/" class="logo footer__logo"><span class="logo__accent">PRODATA</span>SPORTS</a>
+                <p class="footer__text">Профессиональный сервис спортивной аналитики. Мы помогаем принимать взвешенные решения.</p>
+            </div>
+            <div class="footer__nav">
+                <div class="footer__col">
+                    <h4>Сервис</h4>
+                    <a href="stats.html">Статистика</a>
+                    <a href="subscriptions.html">Подписки</a>
+                    <a href="promo.html">Акции</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Поддержка</h4>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contacts.html">Контакты</a>
+                    <a href="rules.html">Правила</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; 2024 ProData Sports. Все права защищены. 18+</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

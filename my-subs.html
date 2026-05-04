@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои подписки | ProData Sports</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Твой стандартный Header -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="header__logo logo">
+                <span class="logo__accent">PRODATA</span>SPORTS
+            </a>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="stats.html" class="nav__link">Статистика</a></li>
+                    <li class="nav__item"><a href="subscriptions.html" class="nav__link">Подписки</a></li>
+                    <li class="nav__item"><a href="promo.html" class="nav__link">Акции</a></li>
+                    <li class="nav__item"><a href="faq.html" class="nav__link">FAQ</a></li>
+                </ul>
+            </nav>
+            <button class="header__burger" aria-label="Открыть меню">
+                <span></span>
+            </button>
+            <div class="header__actions">
+                <a href="cart.html" class="cart-link">
+                    <div class="cart-link__icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                        <span class="cart-link__badge">0</span>
+                    </div>
+                </a>
+                <div class="user-profile">
+                    <div class="user-profile__info">
+                        <span class="user-profile__balance">0 ₽</span>
+                        <div class="user-profile__avatar">
+                            <img src="https://placeholder.com" alt="User">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <div class="container dashboard__container">
+            <!-- Тот самый Sidebar -->
+            <aside class="dashboard__sidebar">
+                <nav class="side-nav">
+                    <a href="dashboard.html" class="side-nav__link">📊 Дашборд</a>
+                    <a href="my-stats.html" class="side-nav__link">📈 Статистика</a>
+                    <a href="my-subs.html" class="side-nav__link side-nav__link--active">💎 Подписки</a>
+                    <a href="settings.html" class="side-nav__link">⚙️ Настройки</a>
+                </nav>
+            </aside>
+
+            <!-- Контент страницы -->
+            <div class="dashboard__content">
+                <h1 class="page-title">Мои подписки</h1>
+                
+                <div class="subs-list">
+                    <!-- Активная подписка -->
+                    <article class="sub-card sub-card--active">
+                        <div class="sub-card__main">
+                            <div class="sub-card__icon">PRO</div>
+                            <div class="sub-card__info">
+                                <h3>Тариф Professional</h3>
+                                <p>Дата окончания: <strong>25 мая 2024</strong></p>
+                            </div>
+                        </div>
+                        <div class="sub-card__actions">
+                            <span class="status-badge">Активна</span>
+                            <a href="subscriptions.html" class="btn btn--outline btn--sm">Продлить</a>
+                        </div>
+                    </article>
+
+                    <!-- История (истекшая) -->
+                    <article class="sub-card sub-card--expired">
+                        <div class="sub-card__main">
+                            <div class="sub-card__icon">LT</div>
+                            <div class="sub-card__info">
+                                <h3>Тариф Lite</h3>
+                                <p>Закончилась: 10 апреля 2024</p>
+                            </div>
+                        </div>
+                        <div class="sub-card__actions">
+                            <span class="status-badge">Истекла</span>
+                            <a href="subscriptions.html" class="btn btn--primary btn--sm">Возобновить</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <a href="/" class="logo footer__logo"><span class="logo__accent">PRODATA</span>SPORTS</a>
+                <p class="footer__text">Профессиональный сервис спортивной аналитики. Мы помогаем принимать взвешенные решения.</p>
+            </div>
+            <div class="footer__nav">
+                <div class="footer__col">
+                    <h4>Сервис</h4>
+                    <a href="stats.html">Статистика</a>
+                    <a href="subscriptions.html">Подписки</a>
+                    <a href="promo.html">Акции</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Поддержка</h4>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contacts.html">Контакты</a>
+                    <a href="rules.html">Правила</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; 2024 ProData Sports. Все права защищены. 18+</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

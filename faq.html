@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="header__logo logo">
+                <span class="logo__accent">PRODATA</span>SPORTS
+            </a>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <!-- Убрали на главной активный класс со статистики -->
+                    <li class="nav__item"><a href="stats.html" class="nav__link">Статистика</a></li>
+                    <li class="nav__item"><a href="subscriptions.html" class="nav__link">Подписки</a></li>
+                    <li class="nav__item"><a href="promo.html" class="nav__link">Акции</a></li>
+                    <li class="nav__item"><a href="faq.html" class="nav__link">FAQ</a></li>
+                </ul>
+            </nav>
+            <button class="header__burger" aria-label="Открыть меню">
+                <span></span>
+            </button>
+           <div class="header__actions">
+                <a href="cart.html" class="cart-link" title="Корзина">
+                    <div class="cart-link__icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                        <span class="cart-link__badge">0</span>
+                    </div>
+                </a>
+                <div class="user-profile">
+                    <div class="user-profile__info">
+                        <span class="user-profile__balance">0 ₽</span>
+                        <div class="user-profile__avatar">
+                            <img src="https://placeholder.com" alt="User">
+                        </div>
+                    </div>
+                    <ul class="user-profile__dropdown">
+                        <li><a href="dashboard.html">Дашборд</a></li>
+                        <li><a href="settings.html">Настройки</a></li>
+                        <li class="divider"></li>
+                        <li><a href="index.html" class="logout">Выйти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="faq-page">
+        <div class="container">
+            <header class="faq-page__header">
+                <h1 class="page-title">Часто задаваемые вопросы</h1>
+                <p class="page-subtitle">Найдите ответы на популярные вопросы о работе нашего сервиса</p>
+            </header>
+            <div class="faq-list">
+                <details class="faq-item" open>
+                    <summary class="faq-item__question">Как получить доступ к прогнозам после оплаты?</summary>
+                    <div class="faq-item__answer">
+                        <p>Сразу после успешной транзакции доступ активируется автоматически. Вам нужно перейти в Личный кабинет (Дашборд), где появится лента активных прогнозов согласно вашему тарифу.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Какая средняя проходимость ваших прогнозов?</summary>
+                    <div class="faq-item__answer">
+                        <p>Средняя проходимость составляет 75-82% на дистанции в один месяц. Мы ведем прозрачную статистику, которую вы можете проверить в соответствующем разделе сайта.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Есть ли гарантии возврата средств?</summary>
+                    <div class="faq-item__answer">
+                        <p>Да, если за время действия подписки суммарный результат оказался отрицательным, мы продлеваем подписку бесплатно на аналогичный период.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <a href="index.html" class="logo footer__logo"><span class="logo__accent">PRODATA</span>SPORTS</a>
+                <p class="footer__text">Профессиональный сервис спортивной аналитики. Мы помогаем принимать взвешенные решения.</p>
+            </div>
+            <div class="footer__nav">
+                <div class="footer__col">
+                    <h4>Сервис</h4>
+                    <a href="stats.html">Статистика</a>
+                    <a href="subscriptions.html">Подписки</a>
+                    <a href="promo.html">Акции</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Поддержка</h4>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contacts.html">Контакты</a>
+                    <a href="rules.html">Правила</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; 2024 ProData Sports. Все права защищены. 18+</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
