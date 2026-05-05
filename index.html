@@ -34,16 +34,33 @@
                 </a>
                 <div class="user-profile">
                     <div class="user-profile__info">
-                        <span class="user-profile__balance">0 ₽</span>
+                        <span class="user-profile__balance">1 450 ₽</span>
                         <div class="user-profile__avatar">
-                            <img src="https://placeholder.com" alt="User">
+                            <svg class="user-profile__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 20a6 6 0 0 0-12 0" />
+                                <circle cx="12" cy="10" r="4" />
+                                <circle cx="12" cy="12" r="10" />
+                            </svg>
                         </div>
                     </div>
                     <ul class="user-profile__dropdown">
-                        <li><a href="dashboard.html">Дашборд</a></li>
-                        <li><a href="settings.html">Настройки</a></li>
+                        <li class="dropdown-header">Аккаунт #7721</li>
+                        <li>
+                            <a href="dashboard.html">
+                                <span class="d-icon">📊</span> Дашборд
+                            </a>
+                        </li>
+                         <li>
+                            <a href="settings.html">
+                                <span class="d-icon">⚙️</span> Настройки
+                            </a>
+                        </li>
                         <li class="divider"></li>
-                        <li><a href="index.html" class="logout">Выйти</a></li>
+                        <li>
+                            <a href="index.html" class="logout">
+                                <span class="d-icon">🚪</span> Выйти
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -119,7 +136,11 @@
                             <li>Коэффициенты до 1.8</li>
                             <li>Поддержка в чате</li>
                         </ul>
-                        <a href="cart.html" class="btn btn--outline">Выбрать</a>
+                        <a href="cart.html" class="btn btn--outline btn--buy" 
+                            data-name="Тариф Lite" 
+                            data-price="2900" 
+                            data-icon="📩">Выбрать
+                        </a>
                     </div>
                     <div class="tariff-item tariff-item--popular">
                         <div class="tariff-item__badge">Популярный</div>
@@ -129,9 +150,12 @@
                             <li>3-5 прогнозов в день</li>
                             <li>Коэффициенты 2.0+</li>
                             <li>Закрытый канал в Telegram</li>
-                            <li>Приоритетная поддержка</li>
                         </ul>
-                        <a href="cart.html" class="btn btn--primary">Выбрать</a>
+                        <a href="cart.html" class="btn btn--primary btn--buy" 
+                            data-name="Тариф Professional" 
+                            data-price="5900" 
+                            data-icon="💎">Выбрать
+                        </a>
                     </div>
                     <div class="tariff-item">
                         <h3 class="tariff-item__name">VIP</h3>
@@ -140,9 +164,11 @@
                             <li>Безлимит прогнозов</li>
                             <li>Доступ ко всем стратегиям</li>
                             <li>Личный консультант</li>
-                            <li>Гарантия дохода по ТЗ</li>
                         </ul>
-                        <a href="cart.html" class="btn btn--outline">Выбрать</a>
+                        <a href="cart.html" class="btn btn--outline btn--buy" 
+                            data-name="Тариф VIP" 
+                            data-price="12900" 
+                            data-icon="👑">Выбрать</a>
                     </div>
                 </div>
             </div>

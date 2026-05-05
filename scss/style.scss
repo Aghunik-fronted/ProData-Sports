@@ -161,54 +161,108 @@ body {
     &__info {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 15px;
+        padding: 5px;
         cursor: pointer;
         transition: $transition;
 
-        &:hover { opacity: 0.8; }
+        &:hover .user-profile__avatar {
+            border-color: $color-primary;
+            background: rgba($color-primary, 0.1);
+        }
     }
 
     &__balance {
-        font-weight: 700;
+        font-weight: 800;
+        color: $color-primary;
         font-size: 15px;
-        color: $color-primary; // Баланс — главный акцент
+        letter-spacing: 0.5px;
     }
 
     &__avatar {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        border: 1px solid $border-color;
-        overflow: hidden;
-        img { width: 100%; height: 100%; object-fit: cover; }
+        width: 38px;
+        height: 38px;
+        border-radius: 10px; // Сделаем мягкий квадрат вместо круга (стильно)
+        border: 1.5px solid $border-color;
+        background: rgba($color-surface, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: $transition;
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        color: $color-text-muted;
     }
 
     &__dropdown {
         position: absolute;
         top: calc(100% + 15px);
         right: 0;
-        width: 180px;
-        background: $color-surface;
+        width: 220px;
+        background: #161b22; // Глубокий темный
         border: 1px solid $border-color;
         border-radius: $radius;
-        padding: 8px 0;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        // Скрыто
-        opacity: 0; visibility: hidden; transform: translateY(10px);
+        padding: 12px 0;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+        list-style: none;
+        
+        // Состояние по умолчанию
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
         transition: $transition;
+        z-index: 2000;
 
-        a {
-            display: block;
-            padding: 10px 20px;
+        .dropdown-header {
+            padding: 0 20px 10px;
+            font-size: 11px;
+            text-transform: uppercase;
             color: $color-text-muted;
+            letter-spacing: 1px;
+            border-bottom: 1px solid rgba($border-color, 0.5);
+            margin-bottom: 8px;
+        }
+
+        li a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            color: $color-text;
             text-decoration: none;
             font-size: 14px;
-            &:hover { color: $color-primary; background: rgba($color-primary, 0.05); }
+            font-weight: 500;
+            transition: $transition;
+
+            .d-icon { font-size: 16px; opacity: 0.7; }
+
+            &:hover {
+                background: rgba($color-primary, 0.08);
+                color: $color-primary;
+                .d-icon { opacity: 1; }
+            }
+        }
+
+        .divider {
+            height: 1px;
+            background: $border-color;
+            margin: 8px 0;
+        }
+
+        .logout {
+            color: #ff4d4d; // Красный для выхода
+            &:hover { background: rgba(#ff4d4d, 0.05); color: #ff4d4d; }
         }
     }
 
-    &:hover &__dropdown {
-        opacity: 1; visibility: visible; transform: translateY(0);
+    // Класс для JS
+    &__dropdown--active {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important;
     }
 }
   .nav {
@@ -1596,5 +1650,49 @@ body {
     // Твои базовые стили
     &--active {
         display: flex !important; // Показывает меню
+    }
+}
+.cart-card {
+    transition: all 0.3s ease; // Плавность для JS-анимации
+    // ... твои старые стили
+}
+
+.cart-empty {
+    text-align: center;
+    padding: 40px;
+    background: $color-surface;
+    border-radius: $radius;
+    border: 1px dashed $border-color;
+    
+    p { margin-bottom: 20px; color: $color-text-muted; }
+}
+.side-nav__link--active {
+    background: $color-primary !important;
+    color: #000 !important;
+    font-weight: 700;
+}
+
+.text-primary {
+    color: $color-primary !important;
+}
+.user-profile__avatar {
+    width: 44px;         // Увеличили размер кружка (было 38px)
+    height: 44px;
+    border-radius: 50%; 
+    background: rgba($color-primary, 0.1); 
+    border: 1.5px solid rgba($color-primary, 0.4);
+    @include flex-center;
+    transition: $transition;
+
+    svg {
+        width: 28px;     // Увеличили саму иконку (было 20-22px)
+        height: 28px;
+        color: $color-primary;
+        stroke-width: 1.5; // Сделали линии чуть тоньше, чтобы на большом размере выглядело изящно
+    }
+
+    &:hover {
+        border-color: $color-primary;
+        transform: scale(1.05);
     }
 }
