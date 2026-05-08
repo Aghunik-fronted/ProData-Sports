@@ -116,6 +116,15 @@ body {
         letter-spacing: 0.5px;
     }
 }
+.nav__link {
+    color: #ffffff; // Ваш обычный цвет (например, белый)
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &--active {
+        color: #ffb800 !important; // ТОЛЬКО золотой цвет
+    }
+}
 .header__actions {
     display: flex;
     align-items: center;
@@ -642,6 +651,7 @@ body {
     gap: 12px;
     overflow-x: auto; // Чтобы фильтры скроллились на мобилках
     padding-bottom: 10px;
+    padding-top: 20px;
 
     .filter-btn {
         white-space: nowrap;
@@ -660,12 +670,14 @@ body {
     }
 }
 
-// Таблица
+.stats-table-section {
+    padding-bottom: 80px;
+}
 .table-wrapper {
     background: $color-surface;
     border-radius: $radius;
     border: 1px solid $border-color;
-    overflow-x: auto; // Адаптив для широких таблиц
+    overflow-x: auto;
 }
 
 .stats-table {
@@ -1691,4 +1703,15 @@ body {
 .stat-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.filter-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    &--active {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: #fff;
+    }
 }

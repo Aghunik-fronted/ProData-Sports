@@ -94,6 +94,14 @@ body {
   font-weight: 600;
   letter-spacing: 0.5px;
 }
+.header .nav__link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.header .nav__link--active {
+  color: #ffb800 !important;
+}
 .header .header__actions {
   display: flex;
   align-items: center;
@@ -680,6 +688,7 @@ body {
   gap: 12px;
   overflow-x: auto;
   padding-bottom: 10px;
+  padding-top: 20px;
 }
 .filters .filter-btn {
   white-space: nowrap;
@@ -694,6 +703,10 @@ body {
 .filters .filter-btn:hover, .filters .filter-btn--active {
   border-color: #ffb800;
   color: #ffb800;
+}
+
+.stats-table-section {
+  padding-bottom: 80px;
 }
 
 .table-wrapper {
@@ -1772,4 +1785,16 @@ input:checked + .payment-item__custom {
 .stat-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.filter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.filter-btn--active {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
 }

@@ -211,6 +211,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    const currentUrl = window.location.href;
+    const navLinks = document.querySelectorAll('.nav__link');
+
+    navLinks.forEach(link => {
+    // Если адрес страницы содержит href ссылки (и href не пустой)
+        if (link.href !== "" && currentUrl.includes(link.href)) {
+        link.classList.add('nav__link--active');
+        } else {
+        link.classList.remove('nav__link--active');
+     }
+    });
+
     // Запуск инициализации при загрузке любой страницы
     updateBadge();
     updateBalanceUI();
