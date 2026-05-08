@@ -228,11 +228,6 @@ body {
   visibility: visible !important;
   transform: translateY(0) !important;
 }
-@media (max-width: 768px) {
-  .header .nav {
-    display: none;
-  }
-}
 .header .nav__list {
   display: flex;
   gap: 32px;
@@ -1768,4 +1763,13 @@ input:checked + .payment-item__custom {
 .user-profile__avatar:hover {
   border-color: #ffb800;
   transform: scale(1.05);
+}
+
+.stat-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }

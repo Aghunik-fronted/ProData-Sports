@@ -5,7 +5,7 @@ $border-color: #334155;
 $color-text: #f8fafc;
 $color-text-muted: #94a3b8;
 $transition: all 0.3s ease;
-$radius: 12px; // Убедись, что эта строка есть!
+$radius: 12px; 
 
 // 2. Миксины для адаптива (Mixins)
 @mixin tablet {
@@ -64,7 +64,7 @@ body {
     color: $color-text;
     display: inline-block;
     letter-spacing: -0.5px;
-    text-transform: uppercase; // Если хочешь всегда заглавные
+    text-transform: uppercase; 
     
     &__accent {
         color: $color-primary;
@@ -107,11 +107,11 @@ body {
   .nav {
     &__list {
         display: flex;
-        gap: 40px; // Увеличили расстояние между ссылками
+        gap: 40px; 
     }
 
     &__link {
-        font-size: 16px; // Увеличили с 14px/15px
+        font-size: 16px; 
         font-weight: 600;
         letter-spacing: 0.5px;
     }
@@ -119,12 +119,10 @@ body {
 .header__actions {
     display: flex;
     align-items: center;
-    gap: 24px; // Увеличили расстояние между элементами
+    gap: 24px; 
 }
 
-// Новая минималистичная корзина
 .cart-link {
-    // ... твои стили
     
     &__icon-wrapper {
         position: relative;
@@ -132,25 +130,25 @@ body {
         align-items: center;
 
         svg {
-            width: 26px;  // Увеличили с 20px до 26px (золотая середина)
+            width: 26px;  
             height: 26px;
-            stroke-width: 1.8; // Сделали линии чуть толще, чтобы иконка была четче
-            color: $color-text; // Цвет иконки теперь белый/светлый, а не мутный
+            stroke-width: 1.8; 
+            color: $color-text;
         }
     }
 
     &__badge {
         position: absolute;
-        top: -4px;   // Сместили чуть выше
-        right: -6px; // И чуть правее
+        top: -4px;   
+        right: -6px; 
         background: $color-primary;
         color: #000;
         font-size: 10px; 
         font-weight: 900;
-        width: 17px; // Увеличили кружок с числом
+        width: 17px; 
         height: 17px;
         border-radius: 50%;
-        border: 2px solid $color-bg; // Добавили обводку под цвет фона, чтобы кружок "отрывался" от иконки
+        border: 2px solid $color-bg; 
         @include flex-center;
     }
 }
@@ -182,7 +180,7 @@ body {
     &__avatar {
         width: 38px;
         height: 38px;
-        border-radius: 10px; // Сделаем мягкий квадрат вместо круга (стильно)
+        border-radius: 10px; 
         border: 1.5px solid $border-color;
         background: rgba($color-surface, 0.5);
         display: flex;
@@ -202,7 +200,7 @@ body {
         top: calc(100% + 15px);
         right: 0;
         width: 220px;
-        background: #161b22; // Глубокий темный
+        background: #161b22; 
         border: 1px solid $border-color;
         border-radius: $radius;
         padding: 12px 0;
@@ -253,12 +251,11 @@ body {
         }
 
         .logout {
-            color: #ff4d4d; // Красный для выхода
+            color: #ff4d4d; 
             &:hover { background: rgba(#ff4d4d, 0.05); color: #ff4d4d; }
         }
     }
 
-    // Класс для JS
     &__dropdown--active {
         opacity: 1 !important;
         visibility: visible !important;
@@ -266,7 +263,6 @@ body {
     }
 }
   .nav {
-    @include tablet { display: none; } // Скрываем на планшетах, уходит в бургер
 
     &__list {
       display: flex;
@@ -292,7 +288,7 @@ body {
     gap: 12px;
 
     @include mobile {
-      .btn--outline { display: none; } // Прячем "Вход" на 360px для экономии места
+      .btn--outline { display: none; } 
     }
   }
 
@@ -524,7 +520,7 @@ body {
     &--popular {
         border-color: $color-primary;
         background: linear-gradient(180deg, rgba($color-primary, 0.05) 0%, transparent 100%), $color-surface;
-        padding: 60px 30px; // Делаем популярный блок чуть выше остальных
+        padding: 60px 30px; 
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 
         @include tablet { padding: 40px 30px; }
@@ -591,7 +587,7 @@ body {
     }
 }
 .footer {
-    background-color: #0b1224; // Чуть темнее, чем $color-bg
+    background-color: #0b1224;
     border-top: 1px solid $border-color;
     padding: 80px 0 30px;
 
@@ -886,7 +882,7 @@ body {
     }
 
     &__content {
-        flex-grow: 1; // Растягивает контент, чтобы кнопки всегда были на одном уровне
+        flex-grow: 1; 
     }
 
     &__title {
@@ -1160,12 +1156,12 @@ body {
 .dashboard {
     &__container {
         display: grid;
-        grid-template-columns: 280px 1fr; // Фиксированная ширина меню
+        grid-template-columns: 280px 1fr; 
         gap: 40px;
         padding: 40px 0;
 
         @include tablet {
-            grid-template-columns: 1fr; // На планшетах меню сверху
+            grid-template-columns: 1fr; 
         }
     }
 }
@@ -1175,7 +1171,7 @@ body {
     flex-direction: column;
     gap: 10px;
     position: sticky;
-    top: 100px; // Чтобы меню не уезжало при скролле
+    top: 100px; 
 
     &__link {
         display: flex;
@@ -1197,7 +1193,7 @@ body {
         }
 
         &--active {
-            color: #000; // Черный текст на золотом фоне
+            color: #000; 
             background: $color-primary;
             border-color: $color-primary;
             font-weight: 700;
@@ -1235,7 +1231,7 @@ body {
         font-size: 18px;
         font-weight: 700;
         color: $color-text;
-        list-style: none; // Убираем стандартную стрелочку
+        list-style: none;
         cursor: pointer;
         display: flex;
         justify-content: space-between;
@@ -1307,9 +1303,9 @@ body {
 .dashboard {
     &__container {
         display: grid;
-        grid-template-columns: 280px 1fr; // Меню фиксировано, остальное (1fr) — контент
-        gap: 60px; // Хороший отступ между меню и графиками
-        max-width: 1400px; // Можно расширить общий контейнер для ЛК
+        grid-template-columns: 280px 1fr;
+        gap: 60px; 
+        max-width: 1400px;
         margin: 0 auto;
         padding: 40px 20px;
         
@@ -1320,7 +1316,7 @@ body {
     }
 
     &__content {
-        width: 100%; // Контент растягивается на всю доступную область (1fr)
+        width: 100%; 
     }
 }
 
@@ -1567,7 +1563,7 @@ body {
     }
 }
 .header__burger {
-    display: none; // Скрыт на десктопе
+    display: none; 
     width: 30px;
     height: 20px;
     position: relative;
@@ -1577,7 +1573,7 @@ body {
     z-index: 1001;
 
     @include tablet {
-        display: block; // Показываем на планшетах и мобилках
+        display: block;
     }
 
     span, &::before, &::after {
@@ -1585,7 +1581,7 @@ body {
         position: absolute;
         width: 100%;
         height: 2px;
-        background-color: $color-primary; // Золотые линии
+        background-color: $color-primary;
         left: 0;
         transition: $transition;
     }
@@ -1594,7 +1590,6 @@ body {
     span { top: 9px; }
     &::after { bottom: 0; }
 
-    // Состояние при клике (добавляется через JS)
     &--active {
         span { opacity: 0; }
         &::before {
@@ -1608,10 +1603,9 @@ body {
     }
 }
 
-// Поведение навигации при открытом бургере
 .header__nav {
     @include tablet {
-        display: none; // Скрыта по умолчанию
+        display: none; 
         &--active {
             display: flex !important;
             position: fixed;
@@ -1635,9 +1629,6 @@ body {
 }
 .user-profile {
     &__dropdown {
-        // Твои базовые стили (opacity: 0 и т.д.)
-        
-        // ОБЯЗАТЕЛЬНО ДОБАВЬ ЭТО:
         &--active {
             opacity: 1 !important;
             visibility: visible !important;
@@ -1647,14 +1638,12 @@ body {
 }
 
 .header__nav {
-    // Твои базовые стили
     &--active {
-        display: flex !important; // Показывает меню
+        display: flex !important; 
     }
 }
 .cart-card {
-    transition: all 0.3s ease; // Плавность для JS-анимации
-    // ... твои старые стили
+    transition: all 0.3s ease; 
 }
 
 .cart-empty {
@@ -1676,7 +1665,7 @@ body {
     color: $color-primary !important;
 }
 .user-profile__avatar {
-    width: 44px;         // Увеличили размер кружка (было 38px)
+    width: 44px;         
     height: 44px;
     border-radius: 50%; 
     background: rgba($color-primary, 0.1); 
@@ -1685,14 +1674,21 @@ body {
     transition: $transition;
 
     svg {
-        width: 28px;     // Увеличили саму иконку (было 20-22px)
+        width: 28px;     
         height: 28px;
         color: $color-primary;
-        stroke-width: 1.5; // Сделали линии чуть тоньше, чтобы на большом размере выглядело изящно
+        stroke-width: 1.5;  
     }
 
     &:hover {
         border-color: $color-primary;
         transform: scale(1.05);
     }
+}
+.stat-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }

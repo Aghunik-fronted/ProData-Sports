@@ -186,6 +186,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- ЛОГИКА ФИЛЬТРАЦИИ ТАБЛИЦЫ ---
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const tableRows = document.querySelectorAll('#stats-body tr');
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+        // 1. Меняем активную кнопку
+            filterButtons.forEach(b => b.classList.remove('filter-btn--active'));
+            btn.classList.add('filter-btn--active');
+
+        // 2. Фильтруем строки
+            const filterValue = btn.getAttribute('data-filter');
+
+            tableRows.forEach(row => {
+                const category = row.getAttribute('data-category');
+            
+                if (filterValue === 'all' || category === filterValue) {
+                    row.style.display = ''; // Показываем
+                } else {
+                    row.style.display = 'none'; // Скрываем
+                }
+            });
+        });
+    });
+
     // Запуск инициализации при загрузке любой страницы
     updateBadge();
     updateBalanceUI();

@@ -71,10 +71,10 @@
             <div class="container">
                 <h1 class="page-title">Общая статистика</h1>
                 <div class="filters">
-                    <button class="filter-btn filter-btn--active">Все виды спорта</button>
-                    <button class="filter-btn">Футбол</button>
-                    <button class="filter-btn">Теннис</button>
-                    <button class="filter-btn">Хоккей</button>
+                    <button class="filter-btn filter-btn--active" data-filter="all">Все виды спорта</button>
+                    <button class="filter-btn" data-filter="football">Футбол</button>
+                    <button class="filter-btn" data-filter="tennis">Теннис</button>
+                    <button class="filter-btn" data-filter="hockey">Хоккей</button>
                 </div>
             </div>
         </section>
@@ -91,20 +91,27 @@
                                 <th>Результат</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
+                        <tbody id="stats-body">
+                            <tr data-category="football">
                                 <td>12.05.2024</td>
                                 <td>Реал Мадрид — Бавария</td>
                                 <td>П1</td>
                                 <td>1.85</td>
                                 <td><span class="status status--win">Выигрыш</span></td>
-                            </tr>
-                            <tr>
+                             </tr>
+                            <tr data-category="football">
                                 <td>11.05.2024</td>
                                 <td>Милан — Интер</td>
                                 <td>Тотал (2.5) Б</td>
                                 <td>2.10</td>
                                 <td><span class="status status--loss">Проигрыш</span></td>
+                            </tr>
+                            <tr data-category="tennis">
+                                <td>10.05.2024</td>
+                                <td>Джокович — Надаль</td>
+                                <td>Ф1 (-1.5)</td>
+                                <td>1.90</td>
+                                <td><span class="status status--win">Выигрыш</span></td>
                             </tr>
                         </tbody>
                     </table>
